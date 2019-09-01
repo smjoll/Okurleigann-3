@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Okurleigan_3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        
+        <ComboBox ItemsSource="{Binding}" DisplayMemberPath="Id" HorizontalAlignment="Left" Height="26" Margin="63,71,0,0" VerticalAlignment="Top" Width="195"/>
+        <ListBox HorizontalAlignment="Left" Height="186" Margin="63,160,0,0" VerticalAlignment="Top" Width="195"/>
+
     </Grid>
 </Window>
