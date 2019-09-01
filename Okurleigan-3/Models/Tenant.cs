@@ -27,5 +27,6 @@ namespace Okurleigan_3.Models
 
         public ObservableCollection<Apartment> Apartments { get; set; }
 
+
     }
 }
