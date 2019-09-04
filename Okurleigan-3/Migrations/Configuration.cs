@@ -50,19 +50,22 @@ namespace Okurleigan_3.Migrations
                     FirstName = "Maria",
                     Lastname = "Anders",
                     DateOfBirth = new DateTime(1955, 08, 02),
-                    
+                    ApartmentId = context.Apartments.Where(c => c.Name.Equals("A")).FirstOrDefault().Id
+
                 },
                 new Tenant()
                 {
                     FirstName = "Anna",
                     Lastname = "Baldvin",
-                    DateOfBirth = new DateTime(1922, 01, 26),                  
+                    DateOfBirth = new DateTime(1922, 01, 26),
+                    ApartmentId = context.Apartments.Where(c => c.Name.Equals("B")).FirstOrDefault().Id
                 },
                 new Tenant()
                 {
                     FirstName = "Sara",
                     Lastname = "Williams",
-                    DateOfBirth = new DateTime(1989, 04, 15),                 
+                    DateOfBirth = new DateTime(1989, 04, 15),
+                    ApartmentId = context.Apartments.Where(c => c.Name.Equals("C")).FirstOrDefault().Id
                 },
                 new Tenant()
                 {

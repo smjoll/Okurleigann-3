@@ -1,0 +1,19 @@
+﻿<Window x:Class="Okurleigan_3.Windows.NewApartmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Okurleigan_3.Windows"
+        mc:Ignorable="d"
+        Title="Nýskrá íbúð" Height="450" Width="418" Loaded="Window_Loaded">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="189,108,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="189,170,0,0" TextWrapping="Wrap" Text="{Binding Size}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="189,232,0,0" TextWrapping="Wrap" Text="{Binding Roomcount}" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="68,239,0,0" TextWrapping="Wrap" Text="Herbergja fjöldi." VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="68,177,0,0" TextWrapping="Wrap" Text="Stærð í fermetrum." VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="68,115,0,0" TextWrapping="Wrap" Text="Nafn á íbúð" VerticalAlignment="Top"/>
+        <Button Content="Skrá" HorizontalAlignment="Left" Height="36" Margin="145,336,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+
+    </Grid>
+</Window>

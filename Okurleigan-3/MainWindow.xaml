@@ -7,8 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <ComboBox ItemsSource="{Binding}" DisplayMemberPath="Id" HorizontalAlignment="Left" Height="26" Margin="63,71,0,0" VerticalAlignment="Top" Width="195"/>
-        <ListBox HorizontalAlignment="Left" Height="186" Margin="63,160,0,0" VerticalAlignment="Top" Width="195"/>
+        <Menu Height="Auto" VerticalAlignment="Top">
+            <MenuItem Header="Bóka">
+                <MenuItem Header="Hætta" Click="menu_QuitClick">
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Nýskrá">
+                <MenuItem Header="Íbúð" Click="new_ApartmentClick"/>
+                <MenuItem Header="Leigjanda" Click="new_TenantClick"/>
+                <MenuItem Header="Atviki" Click="new_incidentClick"/>
+            </MenuItem>
+            <MenuItem Header="Breyta">
+                <MenuItem Header="Íbúð" Click="change_ApartmentClick"/>
+                <MenuItem Header="Leigjanda" Click="change_TenantClick"/>
+                <MenuItem Header="Atviki" Click="change_IncidentClick"/>
+            </MenuItem>
+            <MenuItem Header="Eyða">
+                <MenuItem Header="Íbúð" Click="erase_ApartmentClick"/>
+                <MenuItem Header="Leigjanda" Click="erase_TenantClick"/>
+                <MenuItem Header="Atviki" Click="erase_IncidentClick"/>
+            </MenuItem>
+        </Menu>   
+        <ComboBox ItemsSource="{Binding}" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="26" Margin="63,71,0,0" VerticalAlignment="Top" Width="195"/>
+        <ListBox x:Name="lbTenants" ItemsSource="{Binding Tenants}" DisplayMemberPath="Lastname"  BorderThickness="1" BorderBrush="Gray" HorizontalAlignment="Left" Height="186" Margin="63,160,0,0" VerticalAlignment="Top" Width="195" SelectionChanged="LbTenants_SelectionChanged"/>
 
     </Grid>
 </Window>
