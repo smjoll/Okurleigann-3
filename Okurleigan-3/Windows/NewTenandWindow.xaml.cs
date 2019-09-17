@@ -41,7 +41,7 @@ namespace Okurleigan_3.Windows
         {
             Tenant selectedTenant = (Tenant)lbTenands.SelectedItem;
 
-            t.ApartmentId = selectedTenant.Id;
+            t.ApartmentID = selectedTenant.Id;
 
             SharedContext.dbContext.Tenants.Add(t);
             SharedContext.dbContext.SaveChanges();

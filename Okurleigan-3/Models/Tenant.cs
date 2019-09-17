@@ -52,7 +52,8 @@ namespace Okurleigan_3.Models
 
         public DateTime DateOfBirth { get; set; }
 
-        public int ApartmentId { get; set; }
+        public int ApartmentID { get; set; }
+
 
         public ObservableCollection<Apartment> Apartments { get; set; }
 

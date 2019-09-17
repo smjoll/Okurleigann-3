@@ -11,8 +11,8 @@ namespace Okurleigan_3.Models
     {
         public DbSet<Apartment> Apartments { get; set; }
         public DbSet<Incident> Incidents { get; set; }
-        public DbSet<Tenant> Tenants { get; set; } 
-        //public DbSet<Rental> Rentals { get; set; }
+        public DbSet<Tenant> Tenants { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
         //public DbSet<Status> Statuses { get; set; }
     }
 }

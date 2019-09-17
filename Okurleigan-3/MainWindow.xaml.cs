@@ -33,8 +33,8 @@ namespace Okurleigan_3
             CollectionViewSource view = new CollectionViewSource();
             SharedContext.dbContext.Apartments.Load();
             SharedContext.dbContext.Tenants.Load();
+            SharedContext.dbContext.Rentals.Load();
             SharedContext.Apartments = SharedContext.dbContext.Apartments.Local;
-
             view.Source = SharedContext.Apartments;
             this.DataContext = view;
 
@@ -60,6 +60,12 @@ namespace Okurleigan_3
         private void new_incidentClick(object sender, RoutedEventArgs e)
         {
             NewIncidentWindow win = new NewIncidentWindow();
+            win.ShowDialog();
+        }
+
+        private void new_RentalClick(object sender, RoutedEventArgs e)
+        {
+            NewRentalWindow win = new NewRentalWindow();
             win.ShowDialog();
         }
 
@@ -94,10 +100,12 @@ namespace Okurleigan_3
 
         }
 
-        private void LbTenants_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            SharedContext.selectedTenant = (Tenant)lbTenants.SelectedItem;
+        //private void LbTenants_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    SharedContext.selectedTenant = (Tenant)lbTenants.SelectedItem;
             
-        }
+        //}
+
+       
     }
 }

@@ -68,6 +68,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Rental.cs" />
+    <Compile Include="Models\Status.cs" />
     <Compile Include="Windows\ChangeApartmentWindow.xaml.cs">
       <DependentUpon>ChangeApartmentWindow.xaml</DependentUpon>
     </Compile>
@@ -91,6 +93,9 @@
     </Compile>
     <Compile Include="Windows\NewIncidentWindow.xaml.cs">
       <DependentUpon>NewIncidentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\NewRentalWindow.xaml.cs">
+      <DependentUpon>NewRentalWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\NewTenandWindow.xaml.cs">
       <DependentUpon>NewTenandWindow.xaml</DependentUpon>
@@ -138,6 +143,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\NewIncidentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NewRentalWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

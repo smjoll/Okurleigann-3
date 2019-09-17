@@ -14,5 +14,6 @@ namespace Okurleigan_3.Models
         public static ObservableCollection<Tenant> Tenants = new ObservableCollection<Tenant>();
         public static ObservableCollection<Apartment> Apartments = new ObservableCollection<Apartment>();
         public static Tenant selectedTenant = new Tenant();
+        public static Rental selectedRental = new Rental();
     }
 }

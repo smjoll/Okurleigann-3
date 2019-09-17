@@ -1,0 +1,22 @@
+﻿<Window x:Class="Okurleigan_3.Windows.NewRentalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Okurleigan_3.Windows"
+        mc:Ignorable="d"
+        Title="Nýr leigusamningur" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="38,103,0,0" TextWrapping="Wrap" Text="Íbúð" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="38,142,0,0" TextWrapping="Wrap" Text="Fornafn" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="38,173,0,0" TextWrapping="Wrap" Text="Eftirnafn" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="38,205,0,0" TextWrapping="Wrap" Text="Fæðingardagur" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="177,121,0,0" TextWrapping="Wrap" Text="{Binding FirstName}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="177,156,0,0" TextWrapping="Wrap" Text="{Binding LastName}" VerticalAlignment="Top" Width="120"/>
+        <DatePicker SelectedDate="{Binding DateOfBirth}" HorizontalAlignment="Left" Margin="177,196,0,0" VerticalAlignment="Top" Width="124"/>
+        <ComboBox ItemsSource="{Binding}" DisplayMemberPath="Name" HorizontalAlignment="Left" Margin="177,88,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Skrá" HorizontalAlignment="Left" Height="31" Margin="177,263,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
+        
+
+    </Grid>
+</Window>

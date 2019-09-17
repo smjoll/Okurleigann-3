@@ -15,6 +15,12 @@ namespace Okurleigan_3
         public int Size { get; set; }
         public int RoomCount { get; set; }
         public ObservableCollection<Tenant> Tenants { get; set; }
-        //public int RentalId { get; set; }
+
+        public Apartment()
+        {
+            this.Tenants = new ObservableCollection<Tenant>();
+        }
+        
+
     }
 }

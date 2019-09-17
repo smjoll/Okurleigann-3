@@ -16,27 +16,30 @@ using Okurleigan_3.Models;
 namespace Okurleigan_3.Windows
 {
     /// <summary>
-    /// Interaction logic for ChangeTenantWindow.xaml
+    /// Interaction logic for NewRentalWindow.xaml
     /// </summary>
-    public partial class ChangeTenantWindow : Window
+    public partial class NewRentalWindow : Window
     {
+        private Rental r;
 
-        Tenant temp;
-
-        public ChangeTenantWindow()
+        public NewRentalWindow()
         {
             InitializeComponent();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            temp = new Tenant();
-            temp.FirstName = SharedContext.selectedTenant.FirstName;
-            temp.Lastname = SharedContext.selectedTenant.Lastname;
-            temp.DateOfBirth = SharedContext.selectedTenant.DateOfBirth;
+            r = new Rental();
+            this.DataContext = r;
+        }
 
-            this.DataContext = temp;
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SharedContext.dbContext.Rentals.Add(r);
+            SharedContext.dbContext.SaveChanges();
+            this.Close();
+
+
         }
     }
 }
-
